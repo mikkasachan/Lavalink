@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: lavalink
+    env: docker
+    dockerfilePath: LavalinkServer/docker/Dockerfile
+    dockerContext: .
+    plan: free
+    envVars:
+      - key: SERVER_PORT
+        value: 2333
+      - key: LAVALINK_SERVER_PASSWORD
+        value: youshallnotpass
